@@ -14,6 +14,7 @@ import java.util.Map;
 
 public class Contact implements Serializable {
 
+    //Variables declared that will be used to store business data
     public String uid;
     public String name;
     public int number;
@@ -25,6 +26,16 @@ public class Contact implements Serializable {
         // Default constructor required for calls to DataSnapshot.getValue
     }
 
+    /**
+     * Method that creates a new Contact object
+     *
+     * @param uid
+     * @param name
+     * @param number
+     * @param business
+     * @param address
+     * @param province
+     */
     public Contact(String uid, String name, int number, String business, String address, String province){
         this.uid = uid;
         this.name = name;
@@ -34,6 +45,12 @@ public class Contact implements Serializable {
         this.province = province;
     }
 
+    /**
+     * Method that populates a HashMap view with each contacts individual info and returns
+     * populated view
+     *
+     * @return result populated HashMap view
+     */
     @Exclude
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();

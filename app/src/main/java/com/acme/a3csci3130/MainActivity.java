@@ -52,12 +52,24 @@ public class MainActivity extends Activity {
         });
     }
 
+    /**
+     * Method that starts activity that allows you to create a new business and add it to the
+     * firebase database
+     *
+     * @param v view passed in by button
+     */
     public void createContactButton(View v)
     {
         Intent intent=new Intent(this, CreateContactAcitivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Method that starts activity that allows user to update a businesses current data or delete
+     * the business from the database
+     *
+     * @param business Contact object that is clicked on in the listview
+     */
     private void showDetailView(Contact business)
     {
         Intent intent = new Intent(this, DetailViewActivity.class);
